@@ -238,7 +238,7 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
         <span class="price" data-shop="price">$29.99</span>
         <a href="#order" class="btn btn--heat">Order now</a>
       </div>
-      <p class="ship" style="margin-top:12px" data-shop="shipping">Free shipping</p>
+      <p class="ship" style="margin-top:12px" data-shop="shipping">Free shipping &middot; arrives in 2-4 days</p>
     </div>
     <div class="hero__media">
       <div class="car">
@@ -369,6 +369,8 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
         <p>Please don't. It draws its power from the car battery, so use it while the engine is running.</p></details>
       <details><summary>Can I use it in summer?</summary>
         <p>Yes - switch it to cool wind and it works as a small fan.</p></details>
+      <details><summary>How long does delivery take?</summary>
+        <p>Shipping is free, and orders arrive within 2-4 days.</p></details>
       <details><summary>What's in the box?</summary>
         <p>One car heater and one double-sided adhesive pad.</p></details>
     </div>
@@ -382,7 +384,7 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
     </div>
     <div class="order__box">
       <h2>12V Car Heater &amp; Defroster</h2>
-      <p class="ship" data-shop="shipping">Free shipping</p>
+      <p class="ship" data-shop="shipping">Free shipping &middot; arrives in 2-4 days</p>
       <div class="qty">
         <span>Quantity</span>
         <div class="qty__ctl">
@@ -415,13 +417,17 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
    name     the store name in the header and footer (working name - yours to pick)
    price    in dollars
    shipping the line under the price
-   checkout where "Order now" sends people. Empty = not connected yet.
+   store    the Shopify store the order goes through
+   variant  the product's variant ID in that store. Empty = not connected yet.
+            "Order now" then goes straight to Shopify checkout with the
+            chosen quantity (store/cart/VARIANT:QTY).
    ------------------------------------------------------------------------- */
 var SHOP = {
   name: "ClearHeat",
   price: 29.99,
-  shipping: "Free shipping",
-  checkout: ""
+  shipping: "Free shipping \u00b7 arrives in 2-4 days",
+  store: "https://hollowhex.com",
+  variant: ""
 };
 
 (function () {
@@ -446,8 +452,8 @@ var SHOP = {
     clearTimeout(tt); tt = setTimeout(function () { toastEl.classList.remove("on"); }, 2600); }
 
   document.getElementById("buy").addEventListener("click", function () {
-    if (SHOP.checkout) {
-      location.href = SHOP.checkout + (SHOP.checkout.indexOf("?") < 0 ? "?" : "&") + "quantity=" + q;
+    if (SHOP.variant) {
+      location.href = SHOP.store + "/cart/" + SHOP.variant + ":" + q;
     } else {
       toast("Preview - checkout is not connected yet");
     }
