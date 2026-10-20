@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>12V Car Heater &amp; Defroster - Clear Your Windscreen on Cold Mornings</title>
-<meta name="description" content="Plug-in 12V car heater and defroster. Aim it at a fogged or frosted windscreen for warm air, or switch to cool air in summer. Plugs into any 12V socket." />
+<meta name="description" content="Plug-in 12V car heater and defroster. Aim it at a fogged or frosted windscreen, side or rear window for warm air, or switch to cool air in summer. 120W, plugs into any 12V socket." />
 <meta name="robots" content="noindex" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,6 +25,10 @@
    - Star ratings and reviews - the 99.8% on eBay belongs to the eBay SELLER,
      not to this shop and not to this product. Real reviews go in when you
      have them.
+   - "Anti-fire" ABS - the supplier's wording. A fire-safety claim needs a
+     test certificate behind it, so the page just says ABS plastic.
+   - "Rapid" defrosting - printed on two of the supplier's photos, left on the
+     photos but not repeated in the text, because there is no time to back it.
 -->
 <style>
 :root{
@@ -64,7 +68,7 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
 .hero{position:relative;overflow:hidden;padding:56px 0 64px;
   background:radial-gradient(900px 420px at 85% 10%,rgba(255,122,26,.16),transparent 60%),
              radial-gradient(800px 420px at 0% 0%,rgba(143,208,255,.14),transparent 60%),var(--bg)}
-.hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero__in{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
 .kicker{display:inline-block;color:var(--ice);font-weight:600;font-size:.8rem;letter-spacing:2.4px;
   text-transform:uppercase;margin-bottom:14px}
 .hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);margin-bottom:18px}
@@ -79,8 +83,8 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
 .price{font-family:Sora,sans-serif;font-weight:800;font-size:2.2rem}
 .ship{color:var(--muted);font-size:.92rem}
 .hero__media{position:relative}
-.hero__media img{border-radius:var(--radius);border:1px solid var(--line);
-  box-shadow:0 30px 70px rgba(0,0,0,.55);width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.hero__media img{border-radius:var(--radius);border:1px solid var(--line);background:#fff;
+  box-shadow:0 30px 70px rgba(0,0,0,.55);width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
 .hero__tag{position:absolute;left:16px;bottom:16px;background:rgba(10,16,32,.82);
   border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;font-size:.82rem;
   backdrop-filter:blur(6px)}
@@ -102,7 +106,7 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
 .card h3{font-size:1.15rem;margin-bottom:6px}
 .card p{color:var(--muted);font-size:.95rem}
 
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
 .step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
   padding:28px 24px 24px}
 .step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;
@@ -110,6 +114,19 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
   background:linear-gradient(135deg,var(--ice2),var(--ice))}
 .step h3{font-size:1.08rem;margin-bottom:4px}
 .step p{color:var(--muted);font-size:.95rem}
+
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal button{display:block;width:100%;padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  background:#fff;cursor:zoom-in;text-align:left}
+.gal img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;transition:transform .3s}
+.gal button:hover img{transform:scale(1.03)}
+.gal span{display:block;background:var(--panel);color:var(--text);font:500 .9rem Inter,sans-serif;
+  padding:10px 14px;border-top:1px solid var(--line)}
+.lb{border:0;padding:0;background:transparent;max-width:min(92vw,820px);margin:auto}
+.lb::backdrop{background:rgba(5,8,16,.88)}
+.lb img{width:100%;height:auto;border-radius:14px;background:#fff}
+.lb button{position:absolute;top:8px;right:8px;width:40px;height:40px;border-radius:50%;border:0;
+  background:rgba(10,16,32,.85);color:#fff;font-size:1.4rem;cursor:pointer}
 
 .specs{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 .spec{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);
@@ -135,8 +152,8 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
 
 /* order */
 .order{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.order__media img{border-radius:var(--radius);border:1px solid var(--line);width:100%;
-  height:auto;aspect-ratio:3/2;object-fit:cover}
+.order__media img{border-radius:var(--radius);border:1px solid var(--line);width:100%;background:#fff;
+  height:auto;aspect-ratio:1/1;object-fit:cover;max-width:460px;margin:0 auto}
 .order__box{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
 .order__box h2{font-size:1.6rem;margin-bottom:6px}
 .qty{display:flex;align-items:center;gap:14px;margin:20px 0}
@@ -169,7 +186,8 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
   .hero{padding:32px 0 48px}
   .hero__in,.specs,.order{grid-template-columns:1fr;gap:28px}
   .hero__media{order:-1}
-  .grid3,.steps{grid-template-columns:1fr}
+  .grid3{grid-template-columns:1fr}
+  .steps,.gal{grid-template-columns:1fr 1fr}
   .sec{padding:56px 0}
   .bar{display:flex}
   .top .btn{display:none}
@@ -178,6 +196,9 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
   .top .btn--sm{padding:.55rem .9rem}
   .brand{font-size:.95rem}
   .price{font-size:1.9rem}
+  .steps{grid-template-columns:1fr}
+  .gal{gap:10px}
+  .gal span{font-size:.8rem;padding:8px 10px}
 }
 </style>
 </head>
@@ -198,12 +219,12 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
       <span class="kicker">12V car heater &amp; defroster</span>
       <h1>See through a frosted windscreen <em>sooner.</em></h1>
       <p class="lead">Plug it into your car's 12V socket, point it at the glass and switch it on. It blows
-        warm air straight at the fogged or frosted patch you need to see through - and switches to cool
-        air in the summer.</p>
+        warm air straight at the fogged or frosted patch you need to see through - windscreen, side or
+        rear window - and switches to a cooling fan in the summer.</p>
       <ul class="ticks">
-        <li>Plugs into any 12V cigarette-lighter socket - no fitting, no tools</li>
-        <li>Warm air or cool air, from one switch</li>
-        <li>Stands on the dashboard and tilts toward the glass</li>
+        <li>Plugs into any 12V cigarette-lighter socket - no tools needed</li>
+        <li>One switch: hot wind, off, cool wind</li>
+        <li>Turns 360&deg; and tilts about 80&deg; to aim at the glass</li>
       </ul>
       <div class="buyrow">
         <span class="price" data-shop="price">$29.99</span>
@@ -212,8 +233,8 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
       <p class="ship" style="margin-top:12px" data-shop="shipping">Free shipping</p>
     </div>
     <div class="hero__media">
-      <img src="assets/heater-1.jpg" alt="Black 12V car heater on a car dashboard, blowing warm air at the windscreen" width="680" height="453" />
-      <span class="hero__tag">Warm air on the glass where you need it</span>
+      <img src="assets/heater-main.jpg" alt="Black 12V car heater on its swivel stand, with the cigarette-lighter plug and cable" width="800" height="800" />
+      <span class="hero__tag">12V &middot; 120W &middot; hot or cool air</span>
     </div>
   </div>
 </section>
@@ -229,17 +250,17 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
       <article class="card card--heat">
         <div class="card__ic"><svg viewBox="0 0 24 24"><path d="M3 9h18M3 15h18"/><path d="M8 5c-1.5 2 1.5 2 0 4M12 5c-1.5 2 1.5 2 0 4M16 5c-1.5 2 1.5 2 0 4"/><path d="M8 15c-1.5 2 1.5 2 0 4M12 15c-1.5 2 1.5 2 0 4M16 15c-1.5 2 1.5 2 0 4"/></svg></div>
         <h3>Defrost &amp; demist</h3>
-        <p>Aim it at the windscreen and the warm air works on the frost or fog right in front of it.</p>
+        <p>Aim it at the windscreen, a side window or the rear window and the warm air works on the frost or fog in front of it.</p>
       </article>
       <article class="card">
         <div class="card__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
         <h3>Warm or cool</h3>
-        <p>Two modes in one unit: warm air for winter, a cooling fan when it is hot out.</p>
+        <p>Two modes in one unit: hot wind for winter, a cooling fan when it is hot out. Middle position is off.</p>
       </article>
       <article class="card">
         <div class="card__ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="9" rx="2"/><path d="M10 11v4M14 11v4M9 15h6v3a3 3 0 0 1-6 0z"/><path d="M12 21v1"/></svg></div>
         <h3>Plug in and go</h3>
-        <p>Runs from the 12V socket every car already has. Nothing to install, and it moves car to car.</p>
+        <p>Runs from the 12V socket in cars, SUVs and RVs. The base sticks down with the adhesive pad in the box.</p>
       </article>
     </div>
   </div>
@@ -249,17 +270,36 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
   <div class="wrap">
     <div class="sec__head">
       <h2>How to use it</h2>
-      <p>Thirty seconds from the box to the dashboard.</p>
+      <p>Four steps, no tools.</p>
     </div>
     <div class="steps">
-      <div class="step"><h3>Start the engine</h3><p>Then plug the heater into the 12V socket.</p></div>
-      <div class="step"><h3>Aim it at the glass</h3><p>Set it on the dashboard and tilt it toward the patch you need clear.</p></div>
-      <div class="step"><h3>Pick warm or cool</h3><p>Warm air for frost and fog, cool air for a hot day.</p></div>
+      <div class="step"><h3>Clean the spot</h3><p>Wipe the part of the dashboard where it will sit, so the pad grips.</p></div>
+      <div class="step"><h3>Stick the pad</h3><p>Put the double-sided adhesive pad (in the box) on the base.</p></div>
+      <div class="step"><h3>Press it down</h3><p>Fix it to the dashboard and turn the head toward the glass.</p></div>
+      <div class="step"><h3>Plug in &amp; switch on</h3><p>With the engine running, plug into the 12V socket and pick hot or cool.</p></div>
     </div>
   </div>
 </section>
 
 <section class="sec sec--alt">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>Take a closer look</h2>
+      <p>Tap any photo to see it bigger.</p>
+    </div>
+    <div class="gal">
+      <button type="button"><img src="assets/heater-dash.jpg" alt="Car heater on a dashboard facing a snowy road" width="800" height="800" loading="lazy" /><span>On the dashboard</span></button>
+      <button type="button"><img src="assets/heater-modes.jpg" alt="Car heater with cold wind and warm wind labels" width="800" height="800" loading="lazy" /><span>Hot or cool air</span></button>
+      <button type="button"><img src="assets/heater-airflow.jpg" alt="Diagram of warm and cool air coming out of the heater" width="800" height="800" loading="lazy" /><span>12V, 120W</span></button>
+      <button type="button"><img src="assets/heater-switch.jpg" alt="Close-up of the three-position switch: cool wind, off, hot wind" width="800" height="800" loading="lazy" /><span>The switch</span></button>
+      <button type="button"><img src="assets/heater-size.jpg" alt="Size diagram: 4.7 in wide, 3.9 in high, 2.8 in deep, 43.3 in cable" width="800" height="800" loading="lazy" /><span>Size</span></button>
+      <button type="button"><img src="assets/heater-install.jpg" alt="Four-step guide to sticking the heater to the dashboard" width="800" height="800" loading="lazy" /><span>Fitting it</span></button>
+    </div>
+  </div>
+</section>
+<dialog class="lb" id="lb"><img alt="" /><button type="button" aria-label="Close">&times;</button></dialog>
+
+<section class="sec">
   <div class="wrap specs">
     <div>
       <div class="sec__head" style="text-align:left;margin:0 0 22px">
@@ -269,9 +309,14 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
         <tbody>
           <tr><th scope="row">Power supply</th><td>12V DC, car cigarette-lighter socket</td></tr>
           <tr><th scope="row">Power</th><td>120W</td></tr>
-          <tr><th scope="row">Modes</th><td>Warm air / cool air</td></tr>
-          <tr><th scope="row">Mounting</th><td>Free-standing on the dashboard, tilting stand</td></tr>
+          <tr><th scope="row">Switch</th><td>Cool wind / Off / Hot wind</td></tr>
+          <tr><th scope="row">Adjustment</th><td>About 80&deg; up and down, 360&deg; left and right</td></tr>
+          <tr><th scope="row">Size</th><td>About 4.7 &times; 3.9 &times; 2.8 in (12 &times; 10 &times; 7.2 cm)</td></tr>
+          <tr><th scope="row">Cable length</th><td>43.3 in (110 cm)</td></tr>
+          <tr><th scope="row">Mounting</th><td>Double-sided adhesive pad on the dashboard</td></tr>
+          <tr><th scope="row">Material</th><td>ABS plastic</td></tr>
           <tr><th scope="row">Colour</th><td>Black</td></tr>
+          <tr><th scope="row">In the box</th><td>1 &times; car heater, 1 &times; double-sided adhesive pad</td></tr>
         </tbody>
       </table>
     </div>
@@ -281,31 +326,38 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
         area right in front of it - it will not heat the whole car the way your car's own heater does.</p>
       <p>Use it with the engine running. A heater on the 12V socket with the engine off will run the
         battery down.</p>
+      <p>12V sockets only (cars, SUVs, RVs). It is not made for 24V trucks.</p>
     </div>
   </div>
 </section>
 
-<section class="sec">
+<section class="sec sec--alt">
   <div class="wrap">
     <div class="sec__head"><h2>Questions</h2></div>
     <div class="faq">
       <details><summary>Will it work in my car?</summary>
-        <p>If your car has a 12V cigarette-lighter style socket - and almost every car does - it will plug straight in.</p></details>
+        <p>If your car, SUV or RV has a 12V cigarette-lighter style socket, it will plug straight in. It is 12V only, so not for 24V trucks.</p></details>
+      <details><summary>How does it attach to the dashboard?</summary>
+        <p>A double-sided adhesive pad comes in the box. Wipe the spot clean, stick the pad to the base and press it down. The head then turns and tilts to aim at the glass.</p></details>
+      <details><summary>Does it clear side and rear windows too?</summary>
+        <p>Yes - turn it toward whichever window you need. The cable is 43.3 in (110 cm) long, so it reaches around the front of the car from the socket.</p></details>
       <details><summary>Does it heat the whole car?</summary>
         <p>No. It is a spot heater: it puts warm air where you point it, which is ideal for clearing the
           windscreen or warming your hands, but it is not a replacement for the car's heating.</p></details>
       <details><summary>Can I use it with the engine off?</summary>
         <p>Please don't. It draws its power from the car battery, so use it while the engine is running.</p></details>
       <details><summary>Can I use it in summer?</summary>
-        <p>Yes - switch it to cool air and it works as a small fan.</p></details>
+        <p>Yes - switch it to cool wind and it works as a small fan.</p></details>
+      <details><summary>What's in the box?</summary>
+        <p>One car heater and one double-sided adhesive pad.</p></details>
     </div>
   </div>
 </section>
 
-<section class="sec sec--alt" id="order">
+<section class="sec" id="order">
   <div class="wrap order">
     <div class="order__media">
-      <img src="assets/heater-1.jpg" alt="12V car heater and defroster" width="680" height="453" loading="lazy" />
+      <img src="assets/heater-2in1.jpg" alt="12V car heater and cool fan with its cable and plug" width="800" height="800" loading="lazy" />
     </div>
     <div class="order__box">
       <h2>12V Car Heater &amp; Defroster</h2>
@@ -379,6 +431,18 @@ var SHOP = {
       toast("Preview - checkout is not connected yet");
     }
   });
+
+  var lb = document.getElementById("lb");
+  if (lb && lb.showModal) {
+    var lbImg = lb.querySelector("img");
+    document.querySelectorAll(".gal button").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var i = b.querySelector("img"); lbImg.src = i.src; lbImg.alt = i.alt; lb.showModal();
+      });
+    });
+    lb.querySelector("button").addEventListener("click", function () { lb.close(); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+  }
 
   /* Phone only. The bar shows whenever NEITHER the hero's price row NOR the
      order box is on screen, so there is always exactly one way to buy in
