@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>12V Car Heater &amp; Defroster - Clear Your Windscreen on Cold Mornings</title>
+<meta name="description" content="Plug-in 12V car heater and defroster. Aim it at a fogged or frosted windscreen for warm air, or switch to cool air in summer. Plugs into any 12V socket." />
+<meta name="robots" content="noindex" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<!--
+  ONE-PAGE PRODUCT SITE - 12V car heater / defroster.
+
+  Everything you are likely to change lives in the SHOP block at the bottom of
+  this file: the store name, the price and the shipping line. Change it there
+  and every place on the page that shows it follows.
+
+  Deliberately NOT on this page, and why:
+   - "Also purifies the air" - it is printed on the supplier's photo, but a 12V
+     fan heater has no filter. Repeating it is a claim a customer can get a
+     refund on.
+   - A crossed-out "was" price - there is no previous price to cross out, so a
+     strikethrough would be a made-up discount.
+   - Star ratings and reviews - the 99.8% on eBay belongs to the eBay SELLER,
+     not to this shop and not to this product. Real reviews go in when you
+     have them.
+-->
+<style>
+:root{
+  --bg:#0a1020; --bg2:#0f172b; --panel:#141d33; --line:rgba(140,190,255,.14);
+  --ice:#8fd0ff; --ice2:#cfeaff; --heat:#ff7a1a; --heat2:#ffa35c;
+  --text:#eef3fb; --muted:#9aa8c2; --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;
+  -webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,100% - 32px);margin:0 auto}
+h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01em}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:rgba(10,16,32,.86);backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line)}
+.top__in{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.brand{font-family:Sora,sans-serif;font-weight:800;font-size:1.05rem;letter-spacing:.2px;
+  display:flex;align-items:center;gap:.55rem;white-space:nowrap}
+.brand__dot{width:12px;height:12px;border-radius:50%;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--ice),var(--heat));box-shadow:0 0 14px rgba(255,122,26,.5)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;border:0;cursor:pointer;
+  font:600 1rem Inter,sans-serif;border-radius:999px;padding:.95rem 1.7rem;transition:transform .15s,box-shadow .2s}
+.btn--heat{background:linear-gradient(135deg,var(--heat2),var(--heat));color:#1a0d02;
+  box-shadow:0 10px 28px rgba(255,122,26,.32)}
+.btn--heat:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(255,122,26,.45)}
+.btn--ghost{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.22)}
+.btn--sm{padding:.6rem 1.15rem;font-size:.9rem}
+.btn--wide{width:100%}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:56px 0 64px;
+  background:radial-gradient(900px 420px at 85% 10%,rgba(255,122,26,.16),transparent 60%),
+             radial-gradient(800px 420px at 0% 0%,rgba(143,208,255,.14),transparent 60%),var(--bg)}
+.hero__in{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.kicker{display:inline-block;color:var(--ice);font-weight:600;font-size:.8rem;letter-spacing:2.4px;
+  text-transform:uppercase;margin-bottom:14px}
+.hero h1{font-size:clamp(2.1rem,5.2vw,3.5rem);margin-bottom:18px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--ice2),var(--heat2));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.08rem;max-width:34em;margin-bottom:22px}
+.ticks{list-style:none;display:grid;gap:.5rem;margin-bottom:26px}
+.ticks li{display:flex;gap:.6rem;align-items:flex-start}
+.ticks li::before{content:"";flex:0 0 18px;height:18px;margin-top:.22rem;border-radius:50%;
+  background:var(--ice) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1020' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.buyrow{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.price{font-family:Sora,sans-serif;font-weight:800;font-size:2.2rem}
+.ship{color:var(--muted);font-size:.92rem}
+.hero__media{position:relative}
+.hero__media img{border-radius:var(--radius);border:1px solid var(--line);
+  box-shadow:0 30px 70px rgba(0,0,0,.55);width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.hero__tag{position:absolute;left:16px;bottom:16px;background:rgba(10,16,32,.82);
+  border:1px solid var(--line);border-radius:999px;padding:.45rem .9rem;font-size:.82rem;
+  backdrop-filter:blur(6px)}
+
+/* sections */
+.sec{padding:76px 0}
+.sec--alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.sec__head{text-align:center;max-width:640px;margin:0 auto 42px}
+.sec__head h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:10px}
+.sec__head p{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px}
+.card__ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;
+  background:rgba(143,208,255,.1);border:1px solid var(--line)}
+.card__ic svg{width:24px;height:24px;stroke:var(--ice);fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.card--heat .card__ic{background:rgba(255,122,26,.1)}
+.card--heat .card__ic svg{stroke:var(--heat2)}
+.card h3{font-size:1.15rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{position:relative;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:28px 24px 24px}
+.step::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:38px;height:38px;
+  border-radius:50%;margin-bottom:14px;font:800 1rem Sora,sans-serif;color:#0a1020;
+  background:linear-gradient(135deg,var(--ice2),var(--ice))}
+.step h3{font-size:1.08rem;margin-bottom:4px}
+.step p{color:var(--muted);font-size:.95rem}
+
+.specs{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.spec{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden}
+.spec th,.spec td{text-align:left;padding:15px 18px;border-bottom:1px solid var(--line);font-size:.95rem;
+  vertical-align:top}
+.spec tr:last-child th,.spec tr:last-child td{border-bottom:0}
+.spec th{color:var(--muted);font-weight:500;width:42%}
+.note{background:linear-gradient(180deg,rgba(143,208,255,.08),rgba(143,208,255,.02));
+  border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.note h3{font-size:1.1rem;margin-bottom:8px;display:flex;gap:.5rem;align-items:center}
+.note p{color:var(--muted);font-size:.95rem}
+.note p+p{margin-top:10px}
+
+.faq{max-width:760px;margin:0 auto;display:grid;gap:12px}
+.faq details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:4px 20px}
+.faq summary{cursor:pointer;list-style:none;padding:16px 0;font-weight:600;display:flex;
+  justify-content:space-between;gap:1rem;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--ice);font-size:1.4rem;line-height:1;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 0 18px;font-size:.95rem}
+
+/* order */
+.order{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.order__media img{border-radius:var(--radius);border:1px solid var(--line);width:100%;
+  height:auto;aspect-ratio:3/2;object-fit:cover}
+.order__box{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px}
+.order__box h2{font-size:1.6rem;margin-bottom:6px}
+.qty{display:flex;align-items:center;gap:14px;margin:20px 0}
+.qty__ctl{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.qty__ctl button{width:44px;height:44px;background:transparent;border:0;color:var(--text);
+  font-size:1.3rem;cursor:pointer}
+.qty__ctl button:hover{background:rgba(255,255,255,.06)}
+.qty__ctl output{min-width:36px;text-align:center;font-weight:700}
+.total{display:flex;justify-content:space-between;align-items:baseline;padding:16px 0;margin-bottom:16px;
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.total b{font:800 1.6rem Sora,sans-serif}
+.small{color:var(--muted);font-size:.85rem;margin-top:12px;text-align:center}
+
+.foot{padding:34px 0 110px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+
+/* sticky mobile buy bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:none;align-items:center;gap:12px;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(10,16,32,.94);
+  border-top:1px solid var(--line);backdrop-filter:blur(10px);transform:translateY(110%);transition:transform .25s}
+.bar.on{transform:none}
+.bar__p{font:800 1.25rem Sora,sans-serif;white-space:nowrap}
+.bar .btn{flex:1;padding:.8rem 1rem}
+
+.toast{position:fixed;left:50%;bottom:90px;transform:translate(-50%,20px);opacity:0;z-index:40;
+  background:#fff;color:#0a1020;font-weight:600;font-size:.92rem;padding:.75rem 1.1rem;border-radius:12px;
+  box-shadow:0 12px 30px rgba(0,0,0,.4);transition:.25s;max-width:calc(100% - 32px);text-align:center}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (max-width:900px){
+  .hero{padding:32px 0 48px}
+  .hero__in,.specs,.order{grid-template-columns:1fr;gap:28px}
+  .hero__media{order:-1}
+  .grid3,.steps{grid-template-columns:1fr}
+  .sec{padding:56px 0}
+  .bar{display:flex}
+  .top .btn{display:none}
+}
+@media (max-width:420px){
+  .top .btn--sm{padding:.55rem .9rem}
+  .brand{font-size:.95rem}
+  .price{font-size:1.9rem}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a href="#top" class="brand"><span class="brand__dot"></span><span data-shop="name">ClearHeat</span></a>
+    <a href="#order" class="btn btn--heat btn--sm">Order now</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero__in">
+    <div>
+      <span class="kicker">12V car heater &amp; defroster</span>
+      <h1>See through a frosted windscreen <em>sooner.</em></h1>
+      <p class="lead">Plug it into your car's 12V socket, point it at the glass and switch it on. It blows
+        warm air straight at the fogged or frosted patch you need to see through - and switches to cool
+        air in the summer.</p>
+      <ul class="ticks">
+        <li>Plugs into any 12V cigarette-lighter socket - no fitting, no tools</li>
+        <li>Warm air or cool air, from one switch</li>
+        <li>Stands on the dashboard and tilts toward the glass</li>
+      </ul>
+      <div class="buyrow">
+        <span class="price" data-shop="price">$29.99</span>
+        <a href="#order" class="btn btn--heat">Order now</a>
+      </div>
+      <p class="ship" style="margin-top:12px" data-shop="shipping">Free shipping</p>
+    </div>
+    <div class="hero__media">
+      <img src="assets/heater-1.jpg" alt="Black 12V car heater on a car dashboard, blowing warm air at the windscreen" width="680" height="453" />
+      <span class="hero__tag">Warm air on the glass where you need it</span>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>Made for cold mornings</h2>
+      <p>A small heater that does one job well: getting warm air onto the glass fast, before the car's own
+        heater has had time to warm up.</p>
+    </div>
+    <div class="grid3">
+      <article class="card card--heat">
+        <div class="card__ic"><svg viewBox="0 0 24 24"><path d="M3 9h18M3 15h18"/><path d="M8 5c-1.5 2 1.5 2 0 4M12 5c-1.5 2 1.5 2 0 4M16 5c-1.5 2 1.5 2 0 4"/><path d="M8 15c-1.5 2 1.5 2 0 4M12 15c-1.5 2 1.5 2 0 4M16 15c-1.5 2 1.5 2 0 4"/></svg></div>
+        <h3>Defrost &amp; demist</h3>
+        <p>Aim it at the windscreen and the warm air works on the frost or fog right in front of it.</p>
+      </article>
+      <article class="card">
+        <div class="card__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></div>
+        <h3>Warm or cool</h3>
+        <p>Two modes in one unit: warm air for winter, a cooling fan when it is hot out.</p>
+      </article>
+      <article class="card">
+        <div class="card__ic"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="9" rx="2"/><path d="M10 11v4M14 11v4M9 15h6v3a3 3 0 0 1-6 0z"/><path d="M12 21v1"/></svg></div>
+        <h3>Plug in and go</h3>
+        <p>Runs from the 12V socket every car already has. Nothing to install, and it moves car to car.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head">
+      <h2>How to use it</h2>
+      <p>Thirty seconds from the box to the dashboard.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><h3>Start the engine</h3><p>Then plug the heater into the 12V socket.</p></div>
+      <div class="step"><h3>Aim it at the glass</h3><p>Set it on the dashboard and tilt it toward the patch you need clear.</p></div>
+      <div class="step"><h3>Pick warm or cool</h3><p>Warm air for frost and fog, cool air for a hot day.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt">
+  <div class="wrap specs">
+    <div>
+      <div class="sec__head" style="text-align:left;margin:0 0 22px">
+        <h2>Specifications</h2>
+      </div>
+      <table class="spec">
+        <tbody>
+          <tr><th scope="row">Power supply</th><td>12V DC, car cigarette-lighter socket</td></tr>
+          <tr><th scope="row">Power</th><td>120W</td></tr>
+          <tr><th scope="row">Modes</th><td>Warm air / cool air</td></tr>
+          <tr><th scope="row">Mounting</th><td>Free-standing on the dashboard, tilting stand</td></tr>
+          <tr><th scope="row">Colour</th><td>Black</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <h3>Good to know before you buy</h3>
+      <p>This is a spot heater and defroster. It is designed to clear a patch of windscreen and warm the
+        area right in front of it - it will not heat the whole car the way your car's own heater does.</p>
+      <p>Use it with the engine running. A heater on the 12V socket with the engine off will run the
+        battery down.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec__head"><h2>Questions</h2></div>
+    <div class="faq">
+      <details><summary>Will it work in my car?</summary>
+        <p>If your car has a 12V cigarette-lighter style socket - and almost every car does - it will plug straight in.</p></details>
+      <details><summary>Does it heat the whole car?</summary>
+        <p>No. It is a spot heater: it puts warm air where you point it, which is ideal for clearing the
+          windscreen or warming your hands, but it is not a replacement for the car's heating.</p></details>
+      <details><summary>Can I use it with the engine off?</summary>
+        <p>Please don't. It draws its power from the car battery, so use it while the engine is running.</p></details>
+      <details><summary>Can I use it in summer?</summary>
+        <p>Yes - switch it to cool air and it works as a small fan.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--alt" id="order">
+  <div class="wrap order">
+    <div class="order__media">
+      <img src="assets/heater-1.jpg" alt="12V car heater and defroster" width="680" height="453" loading="lazy" />
+    </div>
+    <div class="order__box">
+      <h2>12V Car Heater &amp; Defroster</h2>
+      <p class="ship" data-shop="shipping">Free shipping</p>
+      <div class="qty">
+        <span>Quantity</span>
+        <div class="qty__ctl">
+          <button type="button" data-q="-1" aria-label="One fewer">&minus;</button>
+          <output id="qty" aria-live="polite">1</output>
+          <button type="button" data-q="1" aria-label="One more">+</button>
+        </div>
+      </div>
+      <div class="total"><span>Total</span><b id="total">$29.99</b></div>
+      <button class="btn btn--heat btn--wide" type="button" id="buy">Order now</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">&copy; <span id="yr">2026</span> <span data-shop="name">ClearHeat</span>. All rights reserved.</div>
+</footer>
+
+<div class="bar" id="bar">
+  <span class="bar__p" data-shop="price">$29.99</span>
+  <a href="#order" class="btn btn--heat">Order now</a>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* -------------------------------------------------------------------------
+   SHOP - change these and the whole page follows.
+   name     the store name in the header and footer (working name - yours to pick)
+   price    in dollars
+   shipping the line under the price
+   checkout where "Order now" sends people. Empty = not connected yet.
+   ------------------------------------------------------------------------- */
+var SHOP = {
+  name: "ClearHeat",
+  price: 29.99,
+  shipping: "Free shipping",
+  checkout: ""
+};
+
+(function () {
+  var money = function (n) { return "$" + n.toFixed(2); };
+  document.querySelectorAll('[data-shop="name"]').forEach(function (e) { e.textContent = SHOP.name; });
+  document.querySelectorAll('[data-shop="price"]').forEach(function (e) { e.textContent = money(SHOP.price); });
+  document.querySelectorAll('[data-shop="shipping"]').forEach(function (e) { e.textContent = SHOP.shipping; });
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  var q = 1, qEl = document.getElementById("qty"), tEl = document.getElementById("total");
+  function render() { qEl.textContent = q; tEl.textContent = money(SHOP.price * q); }
+  document.querySelectorAll("[data-q]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      q = Math.min(10, Math.max(1, q + parseInt(b.getAttribute("data-q"), 10)));
+      render();
+    });
+  });
+  render();
+
+  var toastEl = document.getElementById("toast"), tt;
+  function toast(m) { toastEl.textContent = m; toastEl.classList.add("on");
+    clearTimeout(tt); tt = setTimeout(function () { toastEl.classList.remove("on"); }, 2600); }
+
+  document.getElementById("buy").addEventListener("click", function () {
+    if (SHOP.checkout) {
+      location.href = SHOP.checkout + (SHOP.checkout.indexOf("?") < 0 ? "?" : "&") + "quantity=" + q;
+    } else {
+      toast("Preview - checkout is not connected yet");
+    }
+  });
+
+  /* Phone only. The bar shows whenever NEITHER the hero's price row NOR the
+     order box is on screen, so there is always exactly one way to buy in
+     view and never two. On a phone that includes the top of the page, where
+     the photo and headline fill the first screen and the price is below it. */
+  var bar = document.getElementById("bar");
+  /* Watch the BUTTONS, not their sections. Watching the order section hid the
+     bar as soon as its top edge came into view - while the button itself was
+     still below the fold, leaving no way to buy on screen at all. */
+  var hero = document.querySelector(".hero .buyrow .btn"), order = document.getElementById("buy");
+  if ("IntersectionObserver" in window) {
+    var heroGone = false, orderIn = false;
+    var upd = function () { bar.classList.toggle("on", heroGone && !orderIn); };
+    new IntersectionObserver(function (e) { heroGone = !e[0].isIntersecting; upd(); }).observe(hero);
+    new IntersectionObserver(function (e) { orderIn = e[0].isIntersecting; upd(); }).observe(order);
+  }
+})();
+</script>
+</body>
+</html>
