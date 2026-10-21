@@ -417,17 +417,14 @@ h1,h2,h3{font-family:Sora,Inter,sans-serif;line-height:1.15;letter-spacing:-.01e
    name     the store name in the header and footer (working name - yours to pick)
    price    in dollars
    shipping the line under the price
-   store    the Shopify store the order goes through
-   variant  the product's variant ID in that store. Empty = not connected yet.
-            "Order now" then goes straight to Shopify checkout with the
-            chosen quantity (store/cart/VARIANT:QTY).
+   checkout the payment link "Order now" sends people to.
+            Empty = not connected yet (shows a "preview" note instead).
    ------------------------------------------------------------------------- */
 var SHOP = {
   name: "ClearHeat",
   price: 29.99,
   shipping: "Free shipping \u00b7 arrives in 2-4 days",
-  store: "https://hollowhex.com",
-  variant: ""
+  checkout: ""
 };
 
 (function () {
@@ -452,8 +449,8 @@ var SHOP = {
     clearTimeout(tt); tt = setTimeout(function () { toastEl.classList.remove("on"); }, 2600); }
 
   document.getElementById("buy").addEventListener("click", function () {
-    if (SHOP.variant) {
-      location.href = SHOP.store + "/cart/" + SHOP.variant + ":" + q;
+    if (SHOP.checkout) {
+      location.href = SHOP.checkout;
     } else {
       toast("Preview - checkout is not connected yet");
     }
